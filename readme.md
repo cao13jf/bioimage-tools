@@ -11,12 +11,12 @@ A collection of tools for processing biological or medical images.
 This is a customized framework to display our work but it maybe also valuable for showing other kinds of data.</p>
 
 <p align="justify"> Generally speaking, multiple softwares or applications are involved in rendering the result. The data flow
- follows `*.nii.gz` --> "*.tif" --> "*.obi"/"*.mtl" --> "*.png", Specifically, </p>
+ follows <code>*.nii.gz</code> --> <code>*.tif</code> --> <code>*.obi</code>/<code>*.mtl</code> --> <code>*.png</code>, Specifically, </p>
 
-1. Save segmentation (here `*.nii.gz`) as indexed tiff image. (Code: [`save_indexed_tif`](./utils/utils.py)) 
+1. Save segmentation (here `*.nii.gz`) as indexed tiff image. (Code: [`save_indexed_tif`](./utils/utils.py))
 
-2. <p align="justify"> Use [Fiji](https://fiji.sc) plugin to extract 3D framework (`*.obi`) of the segmentation. If only one image needs to be be processed, the segmentation can be manually import and rendered with `Plugins|Process|Show color surface`; If a bunch  of images are required, the `Macros` would be helpful. (Code: [`draw3DSnap.ijm`](./draw3DSnap.ijm))</p>
-3. <p align="justify"> The [blender](https://www.blender.org) can import `*.obj` and even support user defined python script. Also, the python script can be used to process multiple images automatically. (Code: [blender script](./utils/blender_render.py))</p> 
+2. <p align="justify"> Use <a href="https://fiji.sc">Fiji</a> plugin to extract 3D framework (<code>*.obi</code>) of the segmentation. If only one image needs to be be processed, the segmentation can be manually import and rendered with <code>Plugins|Process|Show color surface</code>; If a bunch  of images are required, the <code>Macros</code> would be helpful. (Code: <a href="./draw3DSnap.ijm"><code>draw3DSnap.ijm</code></a>)</p>
+3. <p align="justify"> The <a href="https://www.blender.org">blender</a> can import <code>*.obj</code> and even support user defined python script. Also, the python script can be used to process multiple images automatically. (Code: <a href=./utils/blender_render.py>blender_script</a>)</p> 
 
 ## Overlay Heatmap
 A transparent color map is overlaied on the raw image. For details, please refer to [HeatMap](https://github.com/LinShanify/HeatMap). (Code: [`Heatmap.py`](./utils/heatmap.py))
