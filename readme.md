@@ -18,6 +18,8 @@ This is a customized framework to display our work but it maybe also valuable fo
 2. <p align="justify"> Use <a href="https://fiji.sc">Fiji</a> plugin to extract 3D framework (<code>*.obi</code>) of the segmentation. If only one image needs to be be processed, the segmentation can be manually import and rendered with <code>Plugins|Process|Show color surface</code>; If a bunch  of images are required, the <code>Macros</code> would be helpful. (Code: <a href="./draw3DSnap.ijm"><code>draw3DSnap.ijm</code></a>)</p>
 3. <p align="justify"> The <a href="https://www.blender.org">blender</a> can import <code>*.obj</code> and even support user defined python script. Also, the python script can be used to process multiple images automatically. (Code: <a href=./utils/blender_render.py>blender_script</a>)</p> 
 
+<p align="center">Example,</p>
+<img src="./examples/OneSurface.png" alt="Rendering example">
 ## Overlay Heatmap
 A transparent color map is overlaied on the raw image. For details, please refer to [HeatMap](https://github.com/LinShanify/HeatMap). (Code: [`Heatmap.py`](./utils/heatmap.py))
 
