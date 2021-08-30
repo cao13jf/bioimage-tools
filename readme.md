@@ -20,6 +20,7 @@ This is a customized framework to display our work but it maybe also valuable fo
 
 <p align="left">Example,</p>
 <p align="center"> <img src="./examples/OneSurface.png" alt="Rendering example"></p>
+
 ## Overlay Heatmap
 A transparent color map is overlaied on the raw image. For details, please refer to [HeatMap](https://github.com/LinShanify/HeatMap). (Code: [`Heatmap.py`](./utils/heatmap.py))
 
