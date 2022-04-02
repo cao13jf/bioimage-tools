@@ -78,6 +78,7 @@ def nib_save_header(img, file_name, xy_res, z_res=None):
     if z_res is None:
         z_res = xy_res
     img = nib.Nifti1Image(img, np.eye(4))
+    img.header.set_xyzt_units(xyz=3, t=8)
     img.header["pixdim"] = [1.0, xy_res, xy_res, z_res, 0., 0., 0., 0.]
     nib.save(img, file_name)
 
