@@ -74,6 +74,13 @@ def nib_save(file_name, data, overwrite=False):
     img = nib.Nifti1Image(data, np.eye(4))
     nib.save(img, file_name)
 
+def nib_save_header(img, file_name, xy_res, z_res=None):
+    if z_res is None:
+        z_res = xy_res
+    img = nib.Nifti1Image(img, np.eye(4))
+    img.header["pixdim"] = [1.0, xy_res, xy_res, z_res, 0., 0., 0., 0.]
+    nib.save(img, file_name)
+
 def nib_load(file_name):
     assert os.path.isfile(file_name), "File {} not exist".format(file_name)
 
