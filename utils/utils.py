@@ -56,3 +56,20 @@ def get_boundary(seg, b_width=1):
     border_pixels = (border_pixels == 0).astype(np.uint8)
 
     return border_pixels * 255
+
+
+def get_cell_surface_mask(cell_volume):
+    """
+    Extract cell surface SegMemb from the volume segmentation
+    :param cell_volume: cell volume SegMemb with the membrane embedded
+    :return cell_surface: cell surface with only surface pixels
+    """
+    cell_mask = cell_volume == 0
+    strel = morphology.ball(2)
+    dilated_cell_mask = ndimage.binary_dilation(cell_mask, strel, iterations=1)
+    surface_mask = np.logical_and(~cell_mask, dilated_cell_mask)
+    surface_seg = cell_volume
+    surface_seg[~surface_mask] = 0
+
+    return surface_seg
+
