@@ -8,6 +8,7 @@ import shutil
 from PIL import Image
 import numpy as np
 import math
+from skimage import morphology
 
 def scale2index(seg0):
     """Rescale all labels into range [0, 255]"""
